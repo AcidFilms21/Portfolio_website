@@ -1,37 +1,48 @@
 <!doctype html>
 <html>
+
 <head>
-<meta charset="UTF-8">
-<title>testing</title>
-<style type="text/css">
-@import url("testingstyle.css");
-</style>
+  <meta charset="UTF-8">
+  <title>testing</title>
+  <link rel="stylesheet" href="testingstyle.css">
 </head>
+
 <body>
-    <nav>
-      <div class="navbar">
-        <div class="container nav-container">
-            <input class="checkbox" type="checkbox" name="" id="" />
-            <div class="hamburger-lines">
-              <span class="line line1"></span>
-              <span class="line line2"></span>
-              <span class="line line3"></span>
-            </div>  
+  <nav>
+    <div class="navbar">
+      <div class="container nav-container">
+        <div class="the-actual-nav">
+          <div class="hamburger-lines" onclick="
+            let menu = document.getElementById(`menu-items`);
+            if (document.getElementById(`hamburger-checkbox`).checked) {
+              menu.setAttribute(`style`,`transform: translateX(0);`);
+            } else {
+              menu.setAttribute(`style`,`transform: translateX(-200%);`);
+            }
+          ">
+            <input class="checkbox" type="checkbox" name="" id="hamburger-checkbox">
+            <span class="line line1"></span>
+            <span class="line line2"></span>
+            <span class="line line3"></span>
+          </div>
           <div class="logo">
             <h1>Navbar</h1>
           </div>
-          <div class="menu-items">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">about</a></li>
-            <li><a href="#">blogs</a></li>
-            <li><a href="#">portfolio</a></li>
-            <li><a href="#">contact</a></li>
-          </div>
+        </div>
+        <div class="menu-items" id="menu-items">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">about</a></li>
+          <li><a href="#">blogs</a></li>
+          <li><a href="#">portfolio</a></li>
+          <li><a href="#">contact</a></li>
         </div>
       </div>
-    </nav>
-	<div class="home">
-	<h1 class="title">Hi! 👋<br>My name is <span class="Name">Fin</span>, I'm a <span class="Job">developer 💻</span><br>located in <span class="Location">Berkshire, UK 🌍</span>.</h1>
-</div>
+    </div>
+  </nav>
+  <div class="home">
+    <h1 class="title">Hi! 👋<br>My name is <span class="Name">Fin</span>, I'm a <span class="Job">developer
+        💻</span><br>located in <span class="Location">Berkshire, UK 🌍</span>.</h1>
+  </div>
 </body>
+
 </html>
